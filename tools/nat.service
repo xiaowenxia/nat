@@ -1,0 +1,10 @@
+# /etc/systemd/system/nat.service
+[Unit]
+Description=nat
+
+[Service]
+Restart=always
+LimitNOFILE=65536
+PIDFile=/tmp/nat.pid
+ExecStart= /home/admin/nat --config /home/admin/nat.json server
+ExecReload=/bin/kill -s HUP $MAINPID

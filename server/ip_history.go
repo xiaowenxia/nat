@@ -2,6 +2,7 @@ package server
 
 import (
 	"net/http"
+	"strings"
 
 	"github.com/gin-gonic/gin"
 	"github.com/xiaowenxia/nat/log"
@@ -50,7 +51,7 @@ func IpHistoryAdd(c *gin.Context) {
 		return
 	}
 
-	record.Ip = c.Request.RemoteAddr
+	record.Ip = strings.Split(c.Request.RemoteAddr, ":")[0]
 	log.Infow("add ip history", "filter", record)
 
 	ret, err := models.IpHistoryAdd(record.Ip, record.Message)

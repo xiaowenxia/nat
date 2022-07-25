@@ -73,7 +73,7 @@ class IndexPage extends React.Component {
         columns={columns}
         pagination={ip_history.pagination}
         onChange={this.handleTableChange}
-      />;
+      />
     </Card >
   }
 

@@ -1,0 +1,10 @@
+# /etc/systemd/system/nat-client.service
+[Unit]
+Description=nat-client
+
+[Service]
+Restart=always
+LimitNOFILE=65536
+PIDFile=/tmp/nat-client.pid
+ExecStart= NAT_HOST=xx NAT_PORT=8787 NAT_MESSAGE=client NAT_KEEPALIVE=60 /home/admin/client
+ExecReload=/bin/kill -s HUP $MAINPID
