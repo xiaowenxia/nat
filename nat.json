@@ -1,0 +1,12 @@
+{
+    "DBName": "",
+    "DBUser": "",
+    "DBURL": "",
+    "DBPassword": "",
+    "DBPort": 3306,
+    "Server": {
+        "Host": "0.0.0.0",
+        "Port": 8787,
+        "statics": "/home/admin/"
+    }
+}

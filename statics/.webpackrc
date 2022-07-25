@@ -1,0 +1,17 @@
+{
+    // "devServer": {
+    "proxy": {
+        "/api": "http://localhost:8787"
+    },
+    // },
+    "extraBabelPlugins": [
+        [
+            "import",
+            {
+                "libraryName": "antd",
+                "libraryDirectory": "es",
+                "style": "css"
+            }
+        ]
+    ]
+}
