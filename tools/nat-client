@@ -1,0 +1,8 @@
+#!/usr/bin/bash
+
+message="{\"message\": \"${NAT_MESSAGE}\"}"
+
+while true; do
+    curl -X POST --url "http://${NAT_HOST}:${NAT_PORT}/api/v1/ip_history/add" --data "${message}";
+    sleep ${NAT_KEEPALIVE};
+done
